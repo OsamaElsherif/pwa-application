@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Display Webcam Stream</title>
+</head>
+ 
+<body>
+    <input id="myFileInput" type="file" accept="image/*;capture=camera">
+    <script>
+            function sendPic() {
+            var file = myInput.files[0];
+
+            // Send file here either by adding it to a `FormData` object 
+            // and sending that via XHR, or by simply passing the file into 
+            // the `send` method of an XHR instance.
+        }
+
+        myInput.addEventListener('change', sendPic, false);
+    </script>
+</body>
+</html>

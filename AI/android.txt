@@ -1,0 +1,3 @@
+title=IntelligentWasteSeperator
+author=Team
+orientation=portrait

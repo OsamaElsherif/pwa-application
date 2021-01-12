@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Waste Seperator</title>
+    <link rel="stylesheet" href="css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body class="white ligten-4">
+    <nav class="z-depth-0">
+        <div class="nav-wrapper container" style="text-align:center;">
+            <a href="/IWS"><span>Intelligent</span> Waste Seperator</a>
+        </div>
+    </nav>
+
+    <div class="container" hidden>
+        <input id="CamF" type="file" accept="image/*" capture="camera">
+        <input id="GallF" type="file" accept="image/*">
+    </div>
+
+    <div class="container">
+        <p>Intelligent Waste Seperator is an AI which written in python, and it's purpose is to classify the materials to two main classes, <span style="color:#ee6e73;">recycable and non-recycable.</span></p>
+        <p>The AI is an apply for the DL algorithms, and we use CNN and ANN in it, to try it, please <span style="color:#ee6e73;">choose a picure from your phone, or capture a one.</span> then push the upload button, and wait untill the photo be ready them <span style="color:#ee6e73;">Run</span> the AI</p>
+    </div>
+
+    <div id="main" class="container">
+            <p>Now you have to <span style="color:#ee6e73;">upload</span> the piture to make it ready for classification.</p><br>
+            <img src="imgs/upload.png" id="pic" style="width: 250px;"><br><br>
+            <p id="progress"></p>
+            <a id="upload_btn" onclick="upload()" style="background: #2e2e2e;" class="waves-effect waves-light btn disabled">Uplaod Picture</a>
+            <p><span style="color:crimson;">Warning: please make the material recognizable and with a good resoulioution for right results.</span></p>
+    </div>
+
+    <div id="Run" class="container" hidden>
+        <p><span style="color:darkgreen;">Your picture has been uploaded successfully</span>, <span style="color: #ee6e73;">Wait</span> untill the initialization of AI</p>
+        <p><span style="color:crimson;">Warning: The AI Result is depends on the quality of the photo, if the result went wrong try to take another photo.</span></p>
+    </div>
+
+    <div>
+        <label for="CamF"><a onclick="clicked('CamF')" class="btn-floating btn-medium add-btn waves-effect waves-light" style="background: #2e2e2e; margin-right: 10px; float: right;">
+            <i class="icons">
+                <img src="icons/ic_camera.svg" style="margin:8px;">
+            </i>
+        </a></label>
+        <label for="GallF"><a onclick="clicked('GallF')" class="btn-floating btn-medium add-btn waves-effect waves-light" style="background: #2e2e2e; margin-left: 10px;">
+            <i class="icons">
+                <img src="icons/ic_gallery.svg" style="margin:8px;">
+            </i>
+        </a></label>
+    </div>
+
+    <footer class="page-footer" style="margin-top: 10px;">
+        <div class="footer-copyright">
+            <div class="container">
+            © 2020 IWS cap team
+            <a class="grey-text text-lighten-4 right">STEM Assuit</a>
+            </div>
+          </div>
+    </footer>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
